@@ -1,3 +1,5 @@
+DEFAULT_USER=$USER
+
 # vim:ft=zsh ts=2 sw=2 sts=2
 #
 # agnoster's Theme - https://gist.github.com/3712874
@@ -204,7 +206,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue $CURRENT_FG '%~'
+  prompt_segment yellow black '%c'
 }
 
 # Virtualenv: current working virtualenv
@@ -247,7 +249,7 @@ build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_virtualenv
-  prompt_aws
+  #prompt_aws
   prompt_context
   prompt_dir
   prompt_git
